@@ -318,3 +318,4 @@ writingDirection=Writing Direction
 zoom=Zoom
 zoomIn=Zoom In
 zoomOut=Zoom Out
+doubleClickTooltip=Double Click Tooltip
