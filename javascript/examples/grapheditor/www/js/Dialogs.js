@@ -117,11 +117,13 @@ let ColorDialog = function (editorUi, color, apply, cancelFn) {
                     }
                 })(presets[row * rowLength + i]);
             }
-
+            if (addResetOption) {
+                addResetOpt(tr);
+            }
             tbody.appendChild(tr);
         }
 
-        if (addResetOption) {
+        function addResetOpt(tr) {
             let td = document.createElement('td');
             td.setAttribute('title', mxResources.get('reset'));
             td.style.border = '1px solid black';
@@ -140,6 +142,7 @@ let ColorDialog = function (editorUi, color, apply, cancelFn) {
                 table.parentNode.replaceChild(createRecentColorTable(), table);
             });
         }
+
 
         center.appendChild(table);
 
